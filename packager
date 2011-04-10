@@ -1,4 +1,4 @@
-#!/usr/bin/env php
+#!C:\wamp\bin\php\php5.2.11\php.exe
 <?php
 
 require dirname(__FILE__) . '/packager.php';
@@ -12,7 +12,8 @@ if ($a0 == '-h' || $a0 == '--help'){
 	exit;
 }
 
-$home = exec('echo $HOME');
+$home = exec('echo %HOMEDRIVE%%HOMEPATH%'); // Windows variable
+//$home = exec('echo $HOME');
 
 $packages = YAML::decode_file("$home/.packages.yml");
 if (empty($packages)) $packages = array();
