@@ -1,3 +1,5 @@
+Notice by Lieuwe Jan: the first line in packager.php should be consistent with your own installation of php.
+
 Packager
 ========
 
